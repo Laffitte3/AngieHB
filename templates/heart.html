@@ -17,8 +17,8 @@
 
         .heart {
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 10vmin; /* Tamaño adaptativo */
+            height: 10vmin; /* Tamaño adaptativo */
             background-color: yellow;
             transform: rotate(-45deg) scale(0);
             animation: growHeart 3s ease-in-out forwards;
@@ -28,19 +28,19 @@
         .heart::after {
             content: '';
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 10vmin; /* Tamaño adaptativo */
+            height: 10vmin; /* Tamaño adaptativo */
             background-color: yellow;
             border-radius: 50%;
         }
 
         .heart::before {
-            top: -50px;
+            top: -5vmin; /* Tamaño adaptativo */
             left: 0;
         }
 
         .heart::after {
-            left: 50px;
+            left: 5vmin; /* Tamaño adaptativo */
             top: 0;
         }
 
