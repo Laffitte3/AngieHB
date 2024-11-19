@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corazón Amarillo</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            transform: rotate(-45deg) scale(0);
+            animation: growHeart 3s ease-in-out forwards;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes growHeart {
+            0% {
+                transform: rotate(-45deg) scale(0);
+            }
+            100% {
+                transform: rotate(-45deg) scale(5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>
